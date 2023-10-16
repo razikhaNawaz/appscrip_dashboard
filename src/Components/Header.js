@@ -1,6 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import classes from './Header.module.css';
+import UpcomingTasks from "./UpcomingTasks";
+import CompletedTasks from "./CompletedTasks";
 
 const Header = () => {
   return (
@@ -16,8 +18,12 @@ const Header = () => {
       </div>
       <div className={classes.child2}>
         <h1>Tasks</h1>
-        <Link to="/UpcomingTasks">Upcoming Tasks</Link><span />
+        <Link to="/UpcomingTasks">UpcomingTasks</Link>
         <Link to="/CompletedTasks">Completed Tasks</Link>
+        <Routes>
+        <Route path="/UpcomingTasks" element={<UpcomingTasks />} />
+          <Route path="/CompletedTasks" element={<CompletedTasks />} />
+          </Routes>
       </div>
     </div>
   );

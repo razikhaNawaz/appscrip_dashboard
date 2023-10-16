@@ -1,8 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 import Header from './Components/Header';
-import UpcomingTasks from './Components/UpcomingTasks'; // Import UpcomingTasks component
-import CompletedTasks from './Components/CompletedTasks'; // Import IncomingTasks component
+
 import Sidebar from './Components/Sidebar'
 
 const App = () => {
@@ -11,11 +10,12 @@ const App = () => {
       <div className="App">
         <Header />
         <Sidebar />
-        <Routes>
-          <Route path="/UpcomingTasks" component={UpcomingTasks} />
-          <Route path="/CompletedTasks" component={<CompletedTasks />} />
+        {/* <Routes> */}
+        {/* <Route path="/UpcomingTasks" element={<UpcomingTasks />} />
+          <Route path="/CompletedTasks" element={<CompletedTasks />} />
+          */}
           {/* Define your other routes here */}
-        </Routes>
+        {/* </Routes> */}
       </div>
     </Router>
   );
